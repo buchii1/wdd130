@@ -246,7 +246,7 @@ card {
     line-height: 30px;
 }
 .background {
-    height: 920px;
+    height: 1000px;
     margin-top: 25px;
     background-color: #B7B7A4;
     grid-column: 1/11;
