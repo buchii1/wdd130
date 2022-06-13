@@ -119,7 +119,9 @@ nav a {
 }
 .home-grid {
     display: grid;
+    display: -ms-grid;
     grid-template-columns: repeat(10, 10fr);
+    -ms-grid-columns: repeat(10, 10fr);
 }
 .rivers-card {
     grid-column: 2/4;
@@ -163,15 +165,15 @@ main section img {
     grid-template-columns: 1fr 3fr 1fr;
     margin-top: -100px;
 }
-#hero-box {
-    grid-column: 1/4;
-    grid-row: 1/3;
-    z-index: -1;
-}
 #hero-msg {
     grid-column: 2/3;
     grid-row: 1/2;
     margin-top: 100px;
+}
+#hero-box {
+    grid-column: 1/4;
+    grid-row: 1/3;
+    z-index: -1;
 }
 #hero-img {
     width: 100%;
@@ -179,8 +181,10 @@ main section img {
 card {
     margin: 200px 0;
 }
-.card-img {
+.ind{
     border: 10px solid #A47551;
+}
+.card-img {
     transition: transform .5s;
     box-shadow: 5px 5px 10px #000;
     width: 100% 
@@ -199,6 +203,111 @@ card {
     box-shadow: 5px 5px 10px #000;
 }
 
+/************* STYLES FOR RIVERS.HTML *****************/
+.size {
+    height: 700px;
+}
+.rivers-grid {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+}
+.idaho-img-river {
+    grid-column: 6/10;
+    grid-row: 2/3;
+    margin-top: 60px;
+}
+.idaho-text-river {
+    grid-column: 2/5;
+    grid-row: 2/3;
+    margin-top: 30px;
+    font-size: 20px;
+    line-height: 30px;
+}
+.utah-img-river {
+    grid-column: 2/6;
+    grid-row: 4/5;
+    margin-top: 40px;
+}
+.utah-text-river {
+    grid-column: 7/10;
+    grid-row: 4/5;
+    font-size: 20px;
+    line-height: 30px;
+}
+.arizona-img-river {
+    grid-column: 6/10;
+    grid-row: 6/7;
+    margin-top: 50px;
+}
+.arizona-text-river {
+    grid-column: 2/5;
+    grid-row: 6/7;
+    font-size: 20px;
+    line-height: 30px;
+}
+.background {
+    height: 920px;
+    margin-top: 25px;
+    background-color: #B7B7A4;
+    grid-column: 1/11;
+    grid-row: 8/11;
+    margin-bottom: 25px;
+}
+.faq {
+    grid-row: 9/10;
+    grid-column: 3/9;
+    text-align: left;
+    background-color: #A47551;
+    color: #000;
+    border-radius: 6px;
+    padding: 25px;
+    font-size: 20px;
+    line-height: 30px;
+    transition: transform .5s;
+    box-shadow: 5px 5px 1px #A47551;   
+}
+.faq:hover {
+    transform: scale(1.1);
+}
+.rivers {
+    text-align: center;
+    color: #000;
+    height: 30px;
+    padding: 5px;
+    background-color: #A47551;
+}
+#banner {
+    display: grid;
+    grid-template-columns: 2fr 2fr 1fr;
+}
+#banner-msg {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    margin-top: 200px;
+    margin-left: 100px
+}
+.text {
+    color: #000;
+    font-weight: bolder;
+}
+.read-more {
+    margin-left: 60px;
+}
+.banner-title {
+    color: #A47551;
+    font-size: 3em;
+    margin-left: 50px;
+    line-height: 0;
+}
+.faq-head {
+    text-align: center;
+}
+.adjust {
+    border-radius: 6px;
+}
+.high {
+    height: 300px;
+}
 /********************* MEDIA QUERY ********************/
 @media screen and (max-width: 900px) {
     #hero, .home-grid {
@@ -218,7 +327,18 @@ card {
     #hero {
         margin-top: 0;
     }
+    #banner {
+        margin-top: 0;
+        display: block;
+        height: auto
+    }
+    #banner-msg {
+        margin-top: 0;
+    }
     #hero-msg h4 {
+        display: none;
+    }
+    #banner-msg h4 {
         display: none;
     }
     .home-title {
@@ -232,7 +352,10 @@ card {
     #background {
         display: none;
     }
-    .mountains, .msg {
+    .background {
+        display:none;
+    }
+    .mountains, .msg, .faq {
         width: 80%;
         display: block;
         margin: 0 auto;
