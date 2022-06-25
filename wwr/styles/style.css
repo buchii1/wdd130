@@ -382,6 +382,7 @@ textarea {
     margin-top: 3em;
 }
 
+
 /********************* MEDIA QUERY ********************/
 @media screen and (max-width: 900px) {
     #hero, .home-grid {
