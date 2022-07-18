@@ -32,7 +32,7 @@
                 Welcome to our online store...
             </p>
         </div>
-        <div class="store-abt">
+        <div class="store-container">
             <h1>About Store</h1>
             <p>
                 Here you can place orders for different gadgets and softwares that we sell. We have different 
@@ -42,6 +42,49 @@
                 and our team will help in procuring them for you asap. Thanks for visiting us today! 
                 -- <span class="tech-style">TechHubb</span>.
             </p>
+            <h1>Products</h1>
+            <section class="stores-grid">
+                <div class="ig-card">
+                    <img class="ig-img" src="images/blogspot.webp" alt="blogger">
+                    <button type="button" class="read about">About Product</button>
+                </div>
+                <div class="ig-card">
+                    <img class="ig-img" src="images/home.jpg" alt="blogger">
+                    <button type="button" class="read about">About Product</button>
+                </div>
+                <div class="ig-card">
+                    <img class="ig-img" src="images/gadget.jpg" alt="blogger">
+                    <button type="button" class="read about">About Product</button>
+                </div>
+                <div class="ig-card">
+                    <img class="ig-img" src="images/gadgets.jpg" alt="blogger">
+                    <button type="button" class="read about">About Product</button>
+                </div>
+                <div class="ig-card">
+                    <img class="ig-img" src="images/blogspot.webp" alt="blogger">
+                    <button type="button" class="read about">About Product</button>
+                </div>
+                <div class="ig-card">
+                    <img class="ig-img" src="images/try.jpeg" alt="blogger">
+                    <button type="button" class="read about">About Product</button>
+                </div>
+                <div class="ig-card">
+                    <img class="ig-img" src="images/blogspot.webp" alt="blogger">
+                    <button type="button" class="read about">About Product</button>
+                </div>
+                <div class="ig-card">
+                    <img class="ig-img" src="images/home.jpg" alt="blogger">
+                    <button type="button" class="read about">About Product</button>
+                </div>
+                <div class="ig-card">
+                    <img class="ig-img" src="images/blogspot.webp" alt="blogger">
+                    <button type="button" class="read about">About Product</button>
+                </div>
+                <div class="ig-card">
+                    <img class="ig-img" src="images/homee.jpg" alt="blogger">
+                    <button type="button" class="read about">About Product</button>
+                </div>
+            </section>
         </div>
     </main>
     <footer>
@@ -76,5 +119,15 @@
             </ul>
         </div>
     </footer>
+    <script>
+        // Get a NodeList of all .about class.
+        const items = document.querySelectorAll('.about');
+            // Add an onclick alert event to all .about class using a forEach loop.
+            items.forEach(item => {
+                item.addEventListener('click', () => {
+                    alert('Page under maintenance.\nCheck back later.');
+                });
+            });
+    </script>
 </body>
 </html>

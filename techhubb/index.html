@@ -11,7 +11,7 @@
 <body>
     <header>
         <div class="left">
-            <img class="logo-img" src="images/logo.png" alt="Logo image">
+            <img id="zoom" class="logo-img" src="images/logo.png" alt="Logo image">
             <h1>TechHubb</h1>
         </div>
         <div class="right">
@@ -38,13 +38,13 @@
                     some gadgets. We are a growing community filled with many experienced developers and IT nerds.
                 </p>
                 <div class="button-box">
-                    <a class="sign" href="#">Sign up with Email</a>
+                    <a class="sign signup" id="try" href="#">Sign up with Email</a>
                 </div>
                 <div class="button-box">
-                    <a class="sign google" href="#">Sign up with Google</a>
+                    <a class="sign google signup" href="#">Sign up with Google</a>
                 </div>
                 <div class="button-box">
-                    <a class="sign" href="#">Sign up with Github</a>
+                    <a class="sign signup" href="#">Sign up with Github</a>
                 </div>
             </div>
         </div>
@@ -137,5 +137,27 @@
             </ul>
         </div>
     </footer>
+    <script> 
+        // Get a NodeList of all .signup class
+        const signs = document.querySelectorAll('.signup');
+        // // Add an onclick alert event to all .signup class using a forEach loop.
+        signs.forEach(sign => {
+            sign.addEventListener('click', function handleClick(event){
+                console.log('box clicked', event);
+                alert('Successful!\nRedirecting to login page!')
+            });
+        });
+        
+        // Select the element with an id of zoom.
+        const logo = document.querySelector('#zoom');
+        // Add an onclick alert event that automically increases the logo height and width.
+        logo.addEventListener('click', () => {
+            logo.setAttribute('style', 'height: 100px; width: 100px;')
+            // Reset the logo height and width to its original size after 300 seconds.
+            setTimeout(function() {
+                logo.setAttribute('style', 'height: 50px; width: 50px;');
+            }, 2000);
+        });
+    </script>
 </body>
 </html>
